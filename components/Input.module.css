@@ -9,6 +9,6 @@
 }
 
 :global(.light) .input {
-  background-color: #b5b5b5;
-  color: #252525;
+  color: #505050;
+  background-color: #e1e1e1;
 }

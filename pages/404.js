@@ -1,13 +1,9 @@
 import ButtonLink from '@/components/ButtonLink';
 import styles from '@/styles/NotFound.module.css';
-import Head from 'next/head';
 
 export default function NotFound() {
   return (
     <>
-    <Head>
-      <title>404 - Error</title>
-    </Head>
       <div className={styles.notFound}>
         <div className={styles.content}>
           찾을 수 없는 페이지입니다.

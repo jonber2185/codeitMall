@@ -3,25 +3,24 @@ import SearchForm from '@/components/SearchForm';
 import axios from '@/lib/axios';
 import styles from '@/styles/Home.module.css';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
 
-export default function Home() {
-  const [products, setProducts] = useState([]);
+export async function getStaticProps() {
+  const res = await axios.get('/products');
+  const products = res.data.results;
 
-  async function getProducts() {
-    const res = await axios.get('/products');
-    const nextProducts = res.data.results;
-    setProducts(nextProducts);
-  }
+  return {
+    props: {
+      products,
+    }
+  };
+}
 
-  useEffect(() => {
-    getProducts();
-  }, []);
-
+export default function Home({ products }) {
+  
   return (
     <>
       <Head>
-        <title>JonberMall</title>
+        <title>Codeitmall</title>
       </Head>
       <SearchForm />
       <ProductList className={styles.productList} products={products} />

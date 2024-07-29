@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import styles from './Dropdown.module.css';
+import arrowImg from '@/public/arrow.svg';
 
 export default function Dropdown({
   className,
@@ -46,6 +47,13 @@ export default function Dropdown({
       ref={inputRef}
     >
       {selectedOption.label}
+      <img
+        className={styles.arrow}
+        src={arrowImg.src}
+        width={12}
+        height={9}
+        alt="▼"
+      />
       <div className={styles.options}>
         {options.map((option) => {
           const selected = value === option.value;

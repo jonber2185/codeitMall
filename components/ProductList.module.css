@@ -16,8 +16,12 @@
   border: 1px solid #252525;
   border-radius: 10px;
 }
+
 :global(.light) .product {
-  background-color: #f9f9f9;
+  color: #121212;
+  background: #f9f9f9;
+  border: 1px solid #e1e1e1;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .image {
@@ -40,6 +44,10 @@
   border-bottom: 1px solid #252525;
 }
 
+:global(.light) .divider {
+  border-color: #ededed;
+}
+
 .name {
   font-size: 18px;
   line-height: 26px;
@@ -55,6 +63,10 @@
   margin-right: 5px;
   color: #505050;
   text-decoration: line-through;
+}
+
+:global(.light) .originalPrice {
+  color: #b5b5b5;
 }
 
 .starRating {
